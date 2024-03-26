@@ -1,62 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anak Cantik</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="wrapper">
-        <h1 class="heading">Sabar ya</h1>
-        <p class="description">Sesuatu yang bagus akan datang hehe</p>
-
-        <div class="timer">
-            <div class="sub_timer">
-                <h1 id="day" class="digit">00</h1>
-                <p class="digit_name">Days</p>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8"
+    >
+      <div
+        class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"
+      ></div>
+      <div
+        class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"
+      ></div>
+      <div class="mx-auto max-w-2xl lg:max-w-4xl">
+        <img
+          class="mx-auto h-16 "
+          src="assets/atas.jpeg"
+          alt=""
+        />
+        <figure class="mt-10">
+          <blockquote
+            class="text-center text-base font-medium leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+          >
+            <p>
+              “Belum bisa sangat romantis, namun dari sekumpulan foto dibawah
+              semoga bisa mendeskripsikan bahwa saya sangat mencintai manusia
+              yang lahir di Surabaya 26 Maret 2001 ini.”
+            </p>
+          </blockquote>
+          <figcaption class="mt-10">
+            <img
+              class="mx-auto h-24 w-24 rounded-full"
+              src="assets/herlambang.jpeg"
+              alt=""
+            />
+            <div
+              class="mt-4 flex items-center justify-center r space-x-3 text-base"
+            >
+              <div class="font-semibold text-gray-900">
+                Herlambang Nurwachid Bagus Sajiwo
+              </div>
+              <svg
+                viewBox="0 0 2 2"
+                width="3"
+                height="3"
+                aria-hidden="true"
+                class="fill-gray-900"
+              >
+                <circle cx="1" cy="1" r="1" />
+              </svg>
+              <div class="text-gray-600">Our Future</div>
             </div>
-            <div class="sub_timer">
-                <h1 id="hour" class="digit">00</h1>
-                <p class="digit_name">Hours</p>
-            </div>
-            <div class="sub_timer">
-                <h1 id="min" class="digit">00</h1>
-                <p class="digit_name">Minutes</p>
-            </div>
-            <div class="sub_timer">
-                <h1 id="sec" class="digit">00</h1>
-                <p class="digit_name">Seconds</p>
-            </div>
-        </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+<!-- component -->
+<div class="bg-purple-50 p-4 flex justify-center items-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-md w-80">
+    <!-- Album Cover -->
+    <img src="assets/cover.jpeg" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+    <!-- Song Title -->
+    <h2 class="text-xl font-semibold text-center">Harapan Untukmmu</h2>
+    <!-- Artist Name -->
+    <p class="text-gray-600 text-sm text-center">Local People</p>
+    <!-- Music Controls -->
+    <div class="mt-6 flex justify-center items-center">
+      <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+        <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)" >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
+            <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
+          </g>
+        </svg>
+      </button>
+      <button class="p-4 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none mx-4" >
+       <img src="assets/play.png" height="24px" width="24px" id="icon">
+      </button>
+      <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+        <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
+            <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
+          </g>
+        </svg>
+      </button>
     </div>
+    <!-- Progress Bar -->
+    <div class="mt-6 bg-gray-200 h-2 rounded-full">
+      <div class="bg-purple-400 h-2 rounded-full w-1/2"></div>
+    </div>
+    <!-- Time Information -->
+    <div class="flex justify-between mt-2 text-sm text-gray-600">
+      <span>1:57</span>
+      <span>3:53</span>
+    </div>
+  </div>
+</div>
 
 
-
-
-    <!-- javascript  -->
-    <script>
-          var target_mili_sec = new Date("Mar 26, 2024 19:00:0").getTime();
-          function timer() {
-              var now_mili_sec = new Date().getTime();
-              var remaining_sec = Math.floor( (target_mili_sec - now_mili_sec) / 1000 );
-
-              var day = Math.floor(remaining_sec / (3600 * 24));
-              var hour = Math.floor((remaining_sec % (3600 * 24)) / 3600);
-              var min = Math.floor((remaining_sec % 3600) / 60);
-              var sec = Math.floor(remaining_sec % 60);
-
-              document.querySelector("#day").innerHTML = day;
-              document.querySelector("#hour").innerHTML = hour;
-              document.querySelector("#min").innerHTML = min;
-              document.querySelector("#sec").innerHTML = sec;
-          }
-
-          setInterval(timer, 1000); //1000 it means 1 sec
-          
-    </script>
-
-    
-</body>
+    <div class="p-5 md:p-8">
+      <div class="text-center text-2xl font-bold mb-8">Potret Favorit</div>
+      <div
+        class="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8"
+      >
+        <img src="assets/niken1.jpeg" alt="" />
+        <img src="assets/niken6.jpeg" alt="" />
+        <img src="assets/niken4.jpeg" alt="" />
+        <img src="assets/niken2.jpeg" alt="" />
+        <img src="assets/niken5.jpeg" alt="" />
+        <img src="assets/niken7.jpeg" alt="" />
+        <img src="assets/niken3.jpeg" alt="" />
+        <img src="assets/niken8.jpeg" alt="" />
+        <img src="assets/niken9.jpeg" alt="" />
+        
+      </div>
+    </div>
+    <audio id="ourSong" src="assets/musik1.MP3"  type="audio/mp3"></audio>
+<script>
+var ourSong = document.getElementById("ourSong");
+  var icon = document.getElementById("icon");
+  icon.onclick = function(){
+      if (ourSong.paused){
+          ourSong.play();
+          icon.src = "assets/pause.png";
+      } else{
+          ourSong.pause();
+          icon.src = "assets/play.png";
+      }
+  }</script>
+  </body>
 </html>
